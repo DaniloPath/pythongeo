@@ -78,3 +78,58 @@ ycoords1
 
 # Tamanho das linhas
 len(line.coords)
+
+# Comprimento das linhas
+
+l_line = line.length
+l_line3 = line3.length
+
+l_line
+
+l_line3
+
+l_line < l_line3
+
+# Create polygons
+
+pl1 = Polygon([(1,1),(5,4),(9,1)])
+pl2 = Polygon([point1, point2, point3])
+
+pl1
+
+pl2
+
+pl1.area
+
+pl2.area
+
+# Use shell in the polygons
+border = [(180, -90), (-180, -90),(-180, 90),(180,90)]
+
+world = Polygon( shell = border)
+
+world
+
+# Create frame in the world
+
+hole = [[(170, -80),(-170,-80),(-170, 80),(170, 80)]]
+
+frame = Polygon(shell=border,holes=hole)
+
+print(frame)
+
+frame
+
+# Print outputs
+
+print(f"Polygon Centroid: {world.centroid}")
+print(f"Polygon Area: {world.area}")
+print(f"Polygon Boudering Box: {world.bounds}")
+print(f"Polygon Boudering Exterior: {world.exterior}")
+print(f"Polygon Boudering Length: {world.length}")
+
+# Create a cicly
+
+point4 = Point(1,1)
+
+point4.buffer(2)
